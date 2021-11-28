@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA Testing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .nounderline {
+            text-decoration: none !important;
+        }
+
+        .keyword {
+            color: #40413E;
+        }
+
+        kbd {
+            background-color: #D4D5D2;
+            color: black;
+        }
+
+        pre code {
+            background-color: #f8f9fa;
+            display: block;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script src="../scripts/scripts.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+        <div class="container">
+            <a href="project2.html" class="navbar-brand">Object Oriented Programming Tutorial</a>
+            
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navmenu"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="pylint.html" class="nav-link">Pylint</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="oop-glossary.html" class="nav-link">OOP Glossary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="testing.html" class="nav-link">AAA Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="solid.html" class="nav-link">SOLID Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculator.html" class="nav-link">Calculator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h2>AAA Testing Tutorial</h2>
+                    <p class="lead my-4">
+                      This page provides the information needed to understand AAA testing in order to implement it into your programs.
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Knowledge -->
+    <section class="text-sm-start">
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>What is Testing?</strong></h2>
+        </div>
+        <div>
+            <p>
+                A test is a procedure that exercises a behavior to determine if the behavior functions correctly. There are several different kinds of tests, like unit 
+                tests, integration tests, or end-to-end tests, but all functional tests do the same basic thing: they try something and report PASS or FAIL.
+            </p>
+            <p>
+                Testing provides an empirical feedback loop for development. That’s how testing keeps us safe. With tests, we know when things break. Without tests, coding can be dangerous.
+                You don't want to deploy bugs.
+            </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>How to Write Good Tests</strong></h2>
+        </div>
+        <div>
+            <p>
+                You may be wondering "How do I write a good test?". There's a simple, but powerful, pattern used to write tests called 
+                <strong class="keyword">AAA Testing</strong>. The three A's stand for <strong class="keyword">Arrange-Act-Assert</strong>.
+            </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h4 class="py-2"><strong>Arrange</strong></h4>
+        </div>
+        <div>
+            <p>
+                <strong class="keyword">Arrange</strong> inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? 
+                Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.  
+            </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h4 class="py-2"><strong>Act</strong></h4>
+        </div>
+        <div>
+            <p>
+                <strong class="keyword">Act</strong> on the target behavior. Act steps should cover the main thing to be tested. 
+                This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior.
+            </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h4 class="py-2"><strong>Assert</strong></h4>
+        </div>
+        <div>
+            <p>
+                <strong class="keyword">Assert</strong> expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness 
+                or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require 
+                checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+            </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Example</strong></h2>
+        </div>
+        <div>
+            <p>Take a look at the following unit test written in Python. It tests Python's addition operator:</p>
+            <pre>
+                <code>
+    def test_addition_operator():
+        # Arrange
+        value_a = 4
+        value_b = 4
+
+        # Act
+        answer = value_a + value_b
+
+        # Assert
+        assert answer == 8
+                </code>
+            </pre>
+            <p>Although the example is extremely trivial, it should help you get a sense of how important tests are and how powerful they can be.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-sm-flex align-items-md-center">
+          <h2 class="py-2"><strong>Using External Data in Testing</strong></h2>
+        </div>
+        <div>
+            <p>
+                In Python, it is possible to run tests using data imported from an external file. The Python package <strong class="keyword">Pandas</strong>
+                allows you to work with other file types, such as Excel and CSV. It is incredibly powerful and flexible. In this tutorial, I will go over
+                only how to read data from <strong class="keyword">CSV files</strong>.
+            </p>
+
+            <p>
+                Your first step would be to install Pandas. Assuming you have Python installed already, open your terminal 
+                and enter the following command: <kbd>pip install pandas</kbd>. Pip is a package manager for Python. If you don't have Python installed,
+                go to <a href="https://www.python.org/downloads/" class="nounderline">this link</a>, download the file, and run it.
+            </p>
+
+            <p>Once you are sure you have both Python and Pandas installed successfully, you can move on.</p>
+
+            <p>In order to start importing data into your Python program, do the following:</p>
+
+            <ol>
+                <li>
+                    Create your CSV file. This can be done in Excel. 
+                    You can follow <a href="../images/csv_example.png" class="nounderline" target="_blank">this template</a> if you're unsure.
+                    Be sure to put the column headings in the first row. You can either input the values manually or generate random numbers. Be sure to save the file
+                    as a CSV and not an Excel file. Name the file <strong class="keyword">data.csv</strong>.
+                </li>
+                <li>
+                    Enter the following code snippet at the top of your Python program:
+                    <pre>
+                        <code>
+    import pandas as pd
+                        </code>
+                    </pre>
+                    You can now start using Pandas in your program.
+                </li>
+                <li>
+                    In order to read in the data, enter the following:
+                    <pre>
+                        <code>
+    df = pd.read_csv('.../data.csv')
+    print(df)
+                        </code>
+                    </pre>
+                    This code snippet reads in the data and prints it out. Be sure to include the absolute path to the CSV data file.
+                </li>
+            </ol>
+
+            <p>Now that we know how to import CSV files into our Python program, lets look at a sample program that utilizes this in unit testing.</p>
+            <p>
+            Take a look at this program that reads in <a href="../images/csv_example.png" class="nounderline" target="_blank">this csv file</a>, called data.csv. The program ensures that 
+            the sum of all values equals result.
+            </p>
+            <pre>
+                <code>
+    import pandas as pd
+
+    data = pd.read_csv("data.csv")
+
+    for a, b, c, d, e in  data.iterrows():
+        assert (a + b + c + d) == e
+                </code>
+            </pre>
+            <p>
+                This short program reads in the data.csv files, and iterates over each row in the file. For each row, it checks if the sum of the four values 
+                equals the result value. If it is false, the assertion will fail.
+            </p>
+            <p>
+                For more information on testing with CSV files, check out the <a href="https://pandas.pydata.org/docs/reference/index.html" target="blank" class="nounderline">Pandas documentation</a>
+                or <a href="https://www.geeksforgeeks.org/different-ways-to-iterate-over-rows-in-pandas-dataframe/" target="_blank" class="nounderline">this article and subarticles</a>.
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
